@@ -7,6 +7,8 @@
 #define BITCOIN_UTIL_H
 
 #include "uint256.h"
+#include <stdio.h>
+#include <stdarg.h>
 
 #ifndef WIN32
 #include <sys/types.h>
@@ -600,7 +602,7 @@ inline pthread_t CreateThread(void(*pfn)(void*), void* parg, bool fWantHandle=fa
     return hthread;
 }
 
-#define THREAD_PRIORITY_LOWEST          PRIO_MAX
+#define THREAD_PRIORITY_LOWEST          19
 #define THREAD_PRIORITY_BELOW_NORMAL    2
 #define THREAD_PRIORITY_NORMAL          0
 #define THREAD_PRIORITY_ABOVE_NORMAL    0
